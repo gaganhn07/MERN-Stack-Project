@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Blog Management System</h1>
+
+    <h2 id="formHeading">Create Blog</h2>
+    <!-- Form to create/update blogs -->
+    <form id="blogForm">
+        <input type="hidden" id="blogId">
+
+        <input type="text" id="title" placeholder="Title" required><br><br>
+        <input type="text" id="author" placeholder="Author" required><br><br>
+        <select id="category" required>
+            <option value="technology">Technology</option>
+            <option value="health">Health</option>
+            <option value="lifestyle">Lifestyle</option>
+            <option value="education">Education</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="cybersecurity">Cybersecurity</option>
+        </select><br><br>
+        <textarea id="summary" placeholder="Summary" required></textarea><br><br>
+        <textarea id="content" placeholder="Content (leave empty for AI generation)"></textarea><br><br>
+
+        <button type="submit" id="submitButton">Create Blog</button>
+    </form>
+
+    <h2>Blog List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Summary</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="blogTable"></tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
